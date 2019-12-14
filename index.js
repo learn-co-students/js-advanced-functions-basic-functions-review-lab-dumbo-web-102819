@@ -27,7 +27,12 @@ function actionApplyer(startInt, arrFunc) {
     if (arrFunc.length === 0) {
         return startInt
     } else {
-        return (((startInt * 2) + 1000) % 7)
+        let temp_total = startInt
+        arrFunc.forEach(func => {
+            temp_total = func(temp_total)
+        })
+        return temp_total
+        // return (((startInt * 2) + 1000) % 7)
        //////// FININSH THIS FOOOOOOOLLLL
     }
 
